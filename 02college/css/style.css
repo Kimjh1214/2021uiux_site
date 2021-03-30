@@ -34,8 +34,8 @@ body { min-width:1200px; }
 
 /*content*/
 
-.content { 
-    height:1307px; 
+.content {
+    height:1307px;
     background-image: url(../images/bg_dot.gif), url(../images/main_bg.jpg);
     background-repeat: repeat, no-repeat;
     background-position: center;
@@ -56,6 +56,12 @@ body { min-width:1200px; }
 .content .container >ul >li { float:left;  width: 25%; height:225px; background: #fff; }
 .content .container >ul >li:nth-child(2n) {background: pink;}
 .content .container >ul >li:nth-child(1) { width: 75%; height: 450px; background: gray; }
+.sliderWrap { position: relative; }
+.imgtxt { position: absolute; width:340px; left: 80px; top: 80px;}
+.imgtxt h3 { font-size:64px; font-weight: normal; line-height: 75px; color:#1452b9; margin-bottom: 20px;}
+.imgtxt h3 b { font-weight: bold; }
+.imgtxt .btn { display: block; width: 168px; line-height:40px; text-align: center; font-size: 14px; background: #192d4e; color:#fff; }
+.imgtxt .fas { margin-left: 5px;}
 .content .container >ul >li:nth-child(2) { height:450px; }
 .content .container >ul >li:nth-child(3) {}
 .content .container >ul >li:nth-child(4) {}
