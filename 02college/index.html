@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>한국대학교</title>
+    <link rel="stylesheet" href="css/colorbox.css">
     <link rel="stylesheet" href="css/jquery.bxslider.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script>
         $(document).ready(function(){
@@ -28,6 +30,13 @@
                 controls:false
             });
         });
+        $(document).ready(function(){
+          $(".youtube").colorbox({
+            iframe:true,
+            innerWidth:700,
+            innerHeight:393.75
+          });
+        });
     </script>
 </head>
 <body>
@@ -36,7 +45,7 @@
             <div class="topWrap clearfix">
                 <div class="tapMenubtn">
                     <ul class="clearfix">
-                        <li><a href="#">대학교</a></li>
+                        <li class="active"><a href="#">대학교</a></li>
                         <li><a href="#">입학안내</a></li>
                         <li><a href="#">대학원</a></li>
                     </ul>
@@ -173,7 +182,10 @@
                 <li>
                   <div class="overlay">캠퍼스 투어</div>
                 </li> <!--25%-->
-                <li>07</li> <!--25%-->
+                <li>
+                  <a href="https://www.youtube.com/embed/Hln2_Az_e3k" class="youtube" title="캠퍼스 전경">
+                    <i class="far fa-play-circle"></i></a>
+                </li> <!--25%-->
                 <li>
                   <div class="slider2Wrap">
                     <ul class="slider2">
