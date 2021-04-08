@@ -8,17 +8,26 @@
   <link rel="stylesheet" href="css/jquery.bxslider.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/jquery.bxslider.js"></script>
+  <script>
+      $(document).ready(function(){
+          $(".slider").bxSlider({
+              controls:false,
+              pagerCustom:".sliderTab"
+          });
+      });
+  </script>
 </head>
 <body>
   <div id="header_wrap">
     <div class="headerBgWrap">
-      <ul class="logoHeader clearfix">
-        <li>
+      <div class="logoHeader clearfix">
+        <div class="logo">
           <h1><a href="#">Travel하이미디어</a></h1>
-        </li>
-        <li>
+        </div>
+        <div class="search-form">
           <form action="#" method="get">
             <fieldset>
               <legend>검색</legend>
@@ -29,22 +38,53 @@
               </div>
             </fieldset>
           </form>
-        </li>
-        <li>
-          <div class="contact">
-            <h2>+82 02 1234 5678</h2>
-            <ul>
-              <li><a href="#"><img src="images/snsicon1.jpg" alt="페이스북"></a></li>
-              <li><a href="#"><img src="images/snsicon2.jpg" alt="트위터"></a></li>
-              <li><a href="#"><img src="images/snsicon3.jpg" alt="구글"></a></li>
-              <li><a href="#"><img src="images/snsicon4.jpg" alt="유튜브"></a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
+        </div>
+        <div class="contact">
+          <h2>+82 <span>02 1234 5678</span></h2>
+          <ul>
+            <li><a href="#"><img src="images/snsicon1.jpg" alt="페이스북"></a></li>
+            <li><a href="#"><img src="images/snsicon2.jpg" alt="트위터"></a></li>
+            <li><a href="#"><img src="images/snsicon3.jpg" alt="구글"></a></li>
+            <li><a href="#"><img src="images/snsicon4.jpg" alt="유튜브"></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="headerGnbWrap">
+      <ul class="clearfix">
+        <li><a href="#">여행도시</a></li>
+        <li><a href="#">호텔예약</a></li>
+        <li><a href="#">렌트카</a></li>
+        <li><a href="#">여행TIP</a></li>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">커뮤니티</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="contentWrap">
+      <div class="contentTopWrap">
+        <div class="sliderBox">
+          <ul class="slider">
+            <li><img src="images/slidebg01.png" alt=""></li>
+            <li><img src="images/slidebg01.png" alt=""></li>
+            <li><img src="images/slidebg01.png" alt=""></li>
+            <li><img src="images/slidebg01.png" alt=""></li>
+          </ul>
+          <div class="sliderTab">
+              <a href="#" data-slide-index="0" active><i class="fas fa-plane"></i> 공항예약</a>
+              <a href="#" data-slide-index="1"><i class="fas fa-mouse"></i> 호텔예약</a>
+              <a href="#" data-slide-index="2"><i class="fas fa-car"></i> 렌트카</a>
+              <a href="#" data-slide-index="3"><i class="fas fa-luggage-cart"></i> 휴양지</a>
+          </div>
+        </div>
+        <div class="content01Wrap">
 
+        </div>
+        <div class="content02Wrap">
+
+        </div>
+      </div>
     </div>
   </div>
 </body>
