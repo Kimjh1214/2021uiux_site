@@ -17,6 +17,16 @@
               controls:false,
               pagerCustom:".sliderTab"
           });
+          var contControl = $(".contSlider").bxSlider({
+            controls:false,
+            pager:false
+          });
+          $(".contenteSlider > .nextBtn").click(function(){
+            contControl.goToNextSlide();
+          });
+          $(".contentSlider > .prevBtn").click(function(){
+            contControl.goToPrevSlide();
+          });
       });
   </script>
 </head>
@@ -78,11 +88,111 @@
               <a href="#" data-slide-index="3"><i class="fas fa-luggage-cart"></i> 휴양지</a>
           </div>
         </div>
-        <div class="content01Wrap">
-
+        <div class="topContent">
+          <ul class="clearfix">
+            <li class="content01Wrap">
+              <div class="contentSlider">
+                <ul class="contSlider">
+                  <li><img src="images/package01.png" alt="">
+                    <div class="imgTxt">
+                      <a href="#"><p>프랑스 <span>&#8361;1,900,000~</span> ></p></a>
+                    </div>
+                  </li>
+                  <li><img src="images/package01.png" alt="">
+                    <div class="imgTxt">
+                      <a href="#"><p>프랑스 <span>&#8361;1,900,000~</span> ></p></a>
+                    </div>
+                  </li>
+                  <li><img src="images/package01.png" alt="">
+                    <div class="imgTxt">
+                      <a href="#"><p>프랑스 <span>&#8361;1,900,000~</span> ></p></a>
+                    </div>
+                  </li>
+                </ul>
+                <div class="nextBtn">
+                    <img src="images/nextbtn.png" alt="">
+                </div>
+                <div class="prevBtn">
+                    <img src="images/prevbtn.png" alt="">
+                </div>
+              </div>
+            </li>
+            <li class="content02Wrap">
+              <div class="contentSlider">
+                <ul class="contSlider">
+                  <li><img src="images/package02.png" alt="">
+                    <div class="imgTxt">
+                      <a href="#"><p>일본 &nbsp;&nbsp;<span>&#8361;890,000~</span> ></p></a>
+                    </div>
+                  </li>
+                  <li><img src="images/package02.png" alt="">
+                    <div class="imgTxt">
+                      <a href="#"><p>일본 &nbsp;&nbsp;<span>&#8361;890,000~</span> ></p></a>
+                    </div>
+                  </li>
+                  <li><img src="images/package02.png" alt="">
+                    <div class="imgTxt">
+                      <a href="#"><p>일본 &nbsp;&nbsp;<span>&#8361;890,000~</span> ></p></a>
+                    </div>
+                  </li>
+                </ul>
+                <div class="nextBtn">
+                    <img src="images/nextbtn.png" alt="">
+                </div>
+                <div class="prevBtn">
+                    <img src="images/prevbtn.png" alt="">
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="content02Wrap">
-
+        <div class="contentTopTxt">
+          <h1>TRAVEL GO</h1>
+          <p>지금, 여행이 떠나고 싶다면? 하이미디어와 여행을 떠나자!</p>
+        </div>
+        </div>
+        <div class="section01Cont">
+          <ul class="clearfix">
+                <li>
+                    <img src="images/content01.png" alt="">
+                    <div class="sectTxt cont01">
+                      <h3>HILLTON HOTEL(PARIS)</h3>
+                      <p><span><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i></span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/content02.png" alt="">
+                    <div class="sectTxt cont02">
+                      <h3>관광명소 (디즈니랜드)</h3>
+                      <p><span><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i></span>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/content03.png" alt="">
+                    <h3 class="weather">TOKYO</h4>
+                    <div class="sectTxt cont03">
+                      <h3>20&#x000B0;C 구름조금</h3>
+                      <p>습도 60% 바람 남남동 2m/s</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/content04.png" alt="">
+                    <div class="sectTxt cont04">
+                      <h3>facebook 여행후기</h3>
+                      <p>(임정희님)</p>
+                    </div>
+                </li>
+            </ul>
         </div>
       </div>
     </div>

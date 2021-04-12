@@ -1,12 +1,14 @@
 @charset "UTF-8";
 
-body {min-width:980px;}
+body {min-width:980px; font-family: 'Roboto', sans-serif;}
 
 /* header */
 
 .headerBgWrap {
-  width: 100%; height: 90px;
+  height: 90px;
   background:url(../images/header_img.png) no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
 .logoHeader { width: 980px; margin: 0 auto;}
@@ -23,11 +25,17 @@ body {min-width:980px;}
   background: #fff; border-radius: 15px;
   border: 0 none; height: 30px;
 }
-.logoHeader .search-form fieldset legend { position: absolute; left: 0; top: -9999px;}
-.logoHeader .search-form label { font-size: 14px; font-weight: bold; padding-left: 17px;}
+.logoHeader .search-form fieldset legend {
+  position: absolute;
+  left: 0; top: -9999px;
+}
+.logoHeader .search-form label {
+  font-size: 0.875rem; font-weight: bold;
+  padding-left: 17px;
+}
 .logoHeader .search-form input {
-  font-size: 13px; border: 0 none;
-  text-indent:5px; height: 30px;
+  font-size: 0.813rem; border: 0 none;
+  text-indent:5px; height: 30px; outline:none;
 }
 .logoHeader .search { position: relative; }
 .logoHeader .search-form .btn-search {
@@ -41,7 +49,7 @@ body {min-width:980px;}
 .logoHeader .contact {float: right; }
 .logoHeader .contact h2 {
   display: inline-block;
-  color: #fff; font-size: 25px;
+  color: #fff; font-size: 1.563rem;
   line-height: 90px; margin-right: 16px;
 }
 .logoHeader .contact h2 span {font-weight: normal;}
@@ -58,8 +66,8 @@ body {min-width:980px;}
 }
 .headerGnbWrap ul li:first-child { border-left: 2px solid #eee;}
 .headerGnbWrap li a {
-  display: block; font-size: 16px;
-  text-align: center; padding: 19px 0;
+  display: block; font-size: 1.188rem;
+  text-align: center; padding: 17px 0;
  }
 
 /* content */
@@ -70,8 +78,16 @@ body {min-width:980px;}
   background-size: cover;
 }
 .contentWrap {width: 980px; margin: 0 auto;}
-.contentTopWrap { width: 483px; padding-top: 52px;}
-.sliderBox {position: relative;}
+.contentTopWrap {
+  width: 483px;
+  padding-top: 52px;
+  position: relative;
+  margin-bottom: 15px;
+}
+.sliderBox {
+  height: 300px; position: relative;
+  overflow: hidden; margin-bottom: 15px;
+}
 .sliderTab {
     position: absolute;
     width: 132px;
@@ -89,14 +105,83 @@ body {min-width:980px;}
     box-shadow: 0 1px 2px #fff;
     transition: all 0.5s
 }
-.sliderBox .sliderTab a .fas { width: 25px; margin-right: 3px; font-size: 20px; transition:all 0.5s}
+.sliderBox .sliderTab a .fas {
+  width: 25px; margin-right: 3px;
+  font-size: 20px; transition:all 0.2s;
+}
 .sliderBox .sliderTab a:hover,
 .sliderBox .sliderTab a.active { background: #fff; color:#000; }
 
 .sliderBox .sliderTab a:hover .fas,
 .sliderBox .sliderTab a.active .fas { color:#0099cb; }
-
 .bx-wrapper {
   box-shadow:none;
   border:0 none;
 }
+
+.topContent { height: 240px; overflow: hidden;}
+.topContent ul > li{ width: 234px; float: left; }
+.topContent .content02Wrap {margin-left: 15px;}
+
+.contentSlider {position: relative;}
+.contentSlider ul > li {width: 234px; height:240px; position: relative;}
+.contentSlider ul > li > .imgTxt{
+  position: absolute; bottom: 0;
+  width: 100%; height: 50px;
+  background: #152630;
+}
+.contentSlider .imgTxt a {
+  display: block; color: #fff;
+  font-size: 18px; text-align: center;
+  line-height: 50px; word-spacing: 6px
+}
+.contentSlider .imgTxt a span {color: #6EC566;}
+
+.contentSlider .nextBtn, .contentSlider .prevBtn {
+  position: absolute; top: 50%;
+  transform: translateY(-58px);
+  cursor:pointer; opacity: 0.7;
+}
+.contentSlider .nextBtn { right: 0; }
+.contentSlider .prevBtn { left: 0; }
+
+.contentTopTxt {
+  position: absolute; left: 517px; top: 70px;
+  letter-spacing:-5px;
+}
+.contentTopTxt h1 {
+  color: #152630; font-size: 70px;
+  line-height: 70px; position: relative;
+}
+.contentTopTxt h1:after {
+  content:""; display: block;
+  width: 90px; height: 5px;
+  background: #152630;
+  position: absolute; left:250px; bottom: -10px;
+}
+.contentTopTxt p {
+  padding-top: 20px;width: 350px;
+  font-size: 30px; letter-spacing: -3px;
+}
+
+.section01Cont ul li {
+  float: left; position: relative;
+  width: 233.75px; height: 240px;
+}
+.section01Cont ul li + li {margin-left: 15px;}
+
+.sectTxt {
+  position: absolute; bottom: 0;
+  height: 64px; width: 100%;
+  padding-left: 16px; padding-top: 8px;
+  font-size: 15px; color: #fff;
+}
+.sectTxt h3 {font-weight: normal;}
+.sectTxt p {font-size: 13px; color: #fff; padding-top: 3px;}
+.sectTxt span { color: #E5A100;}
+.sectTxt.cont01 { background: #529251;}
+.sectTxt.cont02 { background: #152630;}
+.sectTxt.cont03 { background: rgba(0,0,0,0.7);}
+.sectTxt.cont04 { background: #44619D;}
+
+.weather {position: absolute; width: 100%; top: 15px; text-align: center; color: #fff;}
