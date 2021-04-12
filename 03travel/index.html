@@ -17,15 +17,28 @@
               controls:false,
               pagerCustom:".sliderTab"
           });
-          var contControl = $(".contSlider").bxSlider({
+
+          var contControl = $(".content01Wrap .contSlider").bxSlider({
             controls:false,
             pager:false
           });
-          $(".contenteSlider > .nextBtn").click(function(){
+          $(".content01Wrap .nextBtn").click(function(){
             contControl.goToNextSlide();
           });
-          $(".contentSlider > .prevBtn").click(function(){
+          $(".content01Wrap .prevBtn").click(function(){
             contControl.goToPrevSlide();
+          });
+
+
+          var contControl1 = $(".content02Wrap .contSlider").bxSlider({
+            controls:false,
+            pager:false
+          });
+          $(".content02Wrap .nextBtn").click(function(){
+            contControl1.goToNextSlide();
+          });
+          $(".content02Wrap .prevBtn").click(function(){
+            contControl1.goToPrevSlide();
           });
       });
   </script>
@@ -76,10 +89,55 @@
       <div class="contentTopWrap">
         <div class="sliderBox">
           <ul class="slider">
-            <li><img src="images/slidebg01.png" alt=""></li>
-            <li><img src="images/slidebg01.png" alt=""></li>
-            <li><img src="images/slidebg01.png" alt=""></li>
-            <li><img src="images/slidebg01.png" alt=""></li>
+            <li>
+              <div class="formWrap">
+                <form action="form.php">
+                  <fieldset>
+                    <legend>여행일정</legend>
+                    <ul>
+                      <li>
+                        <label for="golo">가고싶은 나라를 선택하세요</label>
+                        <select id="golo" name="golocation">
+                          <option value="">선택하세요</option>
+                          <option value="미국">미국</option>
+                          <option value="일본">일본</option>
+                          <option value="중국">중국</option>
+                        </select>
+                      </li>
+                      <li class="clearfix">
+                        <div class="departureDate">
+                          <label for="sdate">출발일</label>
+                          <input type="date" id="sdate" value="2021-04-21">
+                        </div>
+                        <div class="arrivalDate">
+                          <label for="edate" >도착일</label>
+                          <input type="date" id="edate" value="2021-07-05">
+                        </div>
+                        <div class="seat">
+                          <label for="cgrade">좌석선택</label>
+                          <select id="cgrade" name="cgrade">
+                            <option value="퍼스트">퍼스트</option>
+                            <option value="비즈니스">비즈니스</option>
+                            <option value="이코노미">이코노미</option>
+                          </select>
+                        </div>
+                        <div class="child">
+                          <label for="childNum" id="num">인원</label>
+                          <input type="number" id="childNum" value="1" max="9" min="0" step="1">
+                        </div>
+                        <div class="adult">
+                          <label for="adultNum" id="num">인원</label>
+                          <input type="number" id="adultNum" value="1" max="9" min="0" step="1">
+                        </div>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </form>
+              </div>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
           </ul>
           <div class="sliderTab">
               <a href="#" data-slide-index="0" active><i class="fas fa-plane"></i> 공항예약</a>
@@ -193,6 +251,54 @@
                     </div>
                 </li>
             </ul>
+        </div>
+        <div class="section02Cont">
+          <ul class="clearfix">
+            <li>
+              <img src="images/content05.png" alt="">
+              <div class="sectTxt1">
+                <h3><i class="fas fa-route"></i> 여행정보</h3>
+                <p>다양한 나라의 명소와 맛집 등 상세한 정보를 볼 수 있습니다.</p>
+              </div>
+              <div class="cwrap">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+              </div>
+            </li>
+            <li>
+              <img src="images/content06.png" alt="">
+              <div class="sectTxt1">
+                <h3><i class="fas fa-utensils"></i> 맛집정보</h3>
+                <p>다양한 나라의 명소와 맛집 등 상세한 정보를 볼 수 있습니다.</p>
+              </div>
+              <div class="cwrap">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+              </div>
+            </li>
+            <li>
+              <img src="images/content07.png" alt="">
+              <div class="sectTxt1">
+                <h3><i class="fas fa-hotel"></i> 숙박정보</h3>
+                <p>다양한 나라의 명소와 맛집 등 상세한 정보를 볼 수 있습니다.</p>
+              </div>
+              <div class="cwrap">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+              </div>
+            </li>
+            <li>
+              <img src="images/content08.png" alt="">
+              <div class="sectTxt1">
+                <h3><i class="fas fa-thumbs-up"></i> 여행자후기</h3>
+                <p>다양한 나라의 명소와 맛집 등 상세한 정보를 볼 수 있습니다.</p>
+              </div>
+              <div class="cwrap">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
