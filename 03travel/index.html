@@ -9,12 +9,14 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/jquery.bxslider.js"></script>
   <script>
       $(document).ready(function(){
           $(".slider").bxSlider({
               controls:false,
+              touchEnabled:false,
               pagerCustom:".sliderTab"
           });
 
@@ -48,7 +50,7 @@
     <div class="headerBgWrap">
       <div class="logoHeader clearfix">
         <div class="logo">
-          <h1><a href="#">Travel하이미디어</a></h1>
+          <h1><a href="index.html">Travel하이미디어</a></h1>
         </div>
         <div class="search-form">
           <form action="#" method="get">
@@ -79,7 +81,7 @@
         <li><a href="#">호텔예약</a></li>
         <li><a href="#">렌트카</a></li>
         <li><a href="#">여행TIP</a></li>
-        <li><a href="#">회사소개</a></li>
+        <li><a href="#" class="on">회사소개</a></li>
         <li><a href="#">커뮤니티</a></li>
       </ul>
     </div>
@@ -122,12 +124,17 @@
                           </select>
                         </div>
                         <div class="child">
-                          <label for="childNum" id="num">인원</label>
+                          <label for="childNum" id="num">아이</label>
                           <input type="number" id="childNum" value="1" max="9" min="0" step="1">
                         </div>
                         <div class="adult">
-                          <label for="adultNum" id="num">인원</label>
+                          <label for="adultNum" id="num">성인</label>
                           <input type="number" id="adultNum" value="1" max="9" min="0" step="1">
+                        </div>
+                      </li>
+                      <li>
+                        <div class="btn-search">
+                          <input type="submit" value="검색하기" class="btn-submit">
                         </div>
                       </li>
                     </ul>
@@ -135,9 +142,159 @@
                 </form>
               </div>
             </li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+              <div class="formWrap">
+                <form action="form.php">
+                  <fieldset>
+                    <legend>여행일정</legend>
+                    <ul>
+                      <li>
+                        <label for="golo">가고싶은 나라를 선택하세요</label>
+                        <select id="golo" name="golocation">
+                          <option value="">선택하세요</option>
+                          <option value="미국">미국</option>
+                          <option value="일본">일본</option>
+                          <option value="중국">중국</option>
+                        </select>
+                      </li>
+                      <li class="clearfix">
+                        <div class="departureDate">
+                          <label for="sdate">출발일</label>
+                          <input type="date" id="sdate" value="2021-04-21">
+                        </div>
+                        <div class="arrivalDate">
+                          <label for="edate" >도착일</label>
+                          <input type="date" id="edate" value="2021-07-05">
+                        </div>
+                        <div class="seat">
+                          <label for="cgrade">좌석선택</label>
+                          <select id="cgrade" name="cgrade">
+                            <option value="퍼스트">퍼스트</option>
+                            <option value="비즈니스">비즈니스</option>
+                            <option value="이코노미">이코노미</option>
+                          </select>
+                        </div>
+                        <div class="child">
+                          <label for="childNum" id="num">아이</label>
+                          <input type="number" id="childNum" value="1" max="9" min="0" step="1">
+                        </div>
+                        <div class="adult">
+                          <label for="adultNum" id="num">성인</label>
+                          <input type="number" id="adultNum" value="1" max="9" min="0" step="1">
+                        </div>
+                      </li>
+                      <li>
+                        <div class="btn-search">
+                          <input type="submit" value="검색하기" class="btn-submit">
+                        </div>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </form>
+              </div>
+            </li>
+            <li>
+              <div class="formWrap">
+                <form action="form.php">
+                  <fieldset>
+                    <legend>여행일정</legend>
+                    <ul>
+                      <li>
+                        <label for="golo">가고싶은 나라를 선택하세요</label>
+                        <select id="golo" name="golocation">
+                          <option value="">선택하세요</option>
+                          <option value="미국">미국</option>
+                          <option value="일본">일본</option>
+                          <option value="중국">중국</option>
+                        </select>
+                      </li>
+                      <li class="clearfix">
+                        <div class="departureDate">
+                          <label for="sdate">출발일</label>
+                          <input type="date" id="sdate" value="2021-04-21">
+                        </div>
+                        <div class="arrivalDate">
+                          <label for="edate" >도착일</label>
+                          <input type="date" id="edate" value="2021-07-05">
+                        </div>
+                        <div class="seat">
+                          <label for="cgrade">좌석선택</label>
+                          <select id="cgrade" name="cgrade">
+                            <option value="퍼스트">퍼스트</option>
+                            <option value="비즈니스">비즈니스</option>
+                            <option value="이코노미">이코노미</option>
+                          </select>
+                        </div>
+                        <div class="child">
+                          <label for="childNum" id="num">아이</label>
+                          <input type="number" id="childNum" value="1" max="9" min="0" step="1">
+                        </div>
+                        <div class="adult">
+                          <label for="adultNum" id="num">성인</label>
+                          <input type="number" id="adultNum" value="1" max="9" min="0" step="1">
+                        </div>
+                      </li>
+                      <li>
+                        <div class="btn-search">
+                          <input type="submit" value="검색하기" class="btn-submit">
+                        </div>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </form>
+              </div>
+            </li>
+            <li>
+              <div class="formWrap">
+                <form action="form.php">
+                  <fieldset>
+                    <legend>여행일정</legend>
+                    <ul>
+                      <li>
+                        <label for="golo">가고싶은 나라를 선택하세요</label>
+                        <select id="golo" name="golocation">
+                          <option value="">선택하세요</option>
+                          <option value="미국">미국</option>
+                          <option value="일본">일본</option>
+                          <option value="중국">중국</option>
+                        </select>
+                      </li>
+                      <li class="clearfix">
+                        <div class="departureDate">
+                          <label for="sdate">출발일</label>
+                          <input type="date" id="sdate" value="2021-04-21">
+                        </div>
+                        <div class="arrivalDate">
+                          <label for="edate" >도착일</label>
+                          <input type="date" id="edate" value="2021-07-05">
+                        </div>
+                        <div class="seat">
+                          <label for="cgrade">좌석선택</label>
+                          <select id="cgrade" name="cgrade">
+                            <option value="퍼스트">퍼스트</option>
+                            <option value="비즈니스">비즈니스</option>
+                            <option value="이코노미">이코노미</option>
+                          </select>
+                        </div>
+                        <div class="child">
+                          <label for="childNum" id="num">아이</label>
+                          <input type="number" id="childNum" value="1" max="9" min="0" step="1">
+                        </div>
+                        <div class="adult">
+                          <label for="adultNum" id="num">성인</label>
+                          <input type="number" id="adultNum" value="1" max="9" min="0" step="1">
+                        </div>
+                      </li>
+                      <li>
+                        <div class="btn-search">
+                          <input type="submit" value="검색하기" class="btn-submit">
+                        </div>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </form>
+              </div>
+            </li>
           </ul>
           <div class="sliderTab">
               <a href="#" data-slide-index="0" active><i class="fas fa-plane"></i> 공항예약</a>
@@ -180,17 +337,17 @@
                 <ul class="contSlider">
                   <li><img src="images/package02.png" alt="">
                     <div class="imgTxt">
-                      <a href="#"><p>일본 &nbsp;&nbsp;<span>&#8361;890,000~</span> ></p></a>
+                      <a href="#"><p>일본 &nbsp;&nbsp;&nbsp;<span>&#8361;890,000~</span> ></p></a>
                     </div>
                   </li>
                   <li><img src="images/package02.png" alt="">
                     <div class="imgTxt">
-                      <a href="#"><p>일본 &nbsp;&nbsp;<span>&#8361;890,000~</span> ></p></a>
+                      <a href="#"><p>일본 &nbsp;&nbsp;&nbsp;<span>&#8361;890,000~</span> ></p></a>
                     </div>
                   </li>
                   <li><img src="images/package02.png" alt="">
                     <div class="imgTxt">
-                      <a href="#"><p>일본 &nbsp;&nbsp;<span>&#8361;890,000~</span> ></p></a>
+                      <a href="#"><p>일본 &nbsp;&nbsp;&nbsp;<span>&#8361;890,000~</span> ></p></a>
                     </div>
                   </li>
                 </ul>
