@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* header */
+#headerTop {
+  width: 1240px; position: fixed; z-index:9999;
+  left: 50%; transform: translate(-50%); top: 20px;
+}
+#headerTop h1.logo { float: left; width: 100px;}
+#headerTop #main_menu {float: right;}
+
+#main_menu li {float: left;}
+#main_menu li a {
+  display: block; padding: 0 20px; line-height: 40px;
+  color: #fff; font-weight: bold;
+}
+#main_menu li:hover { background:gray;}
+
+#headerTop .toggleMenu {
+  width: 50px; height: 50px; background:gray; float: right;
+  display:none; justify-content: center; align-items: center;
+}
+#headerTop .toggleMenu div {
+  width: 30px; height: 2px; background: #fff; border-radius: 2px;
+  position: absolute;
+}
+#headerTop .toggleMenu .bar1 {transform:translateY(10px);}
+#headerTop .toggleMenu .bar2 {}
+#headerTop .toggleMenu .bar3 {transform:translateY(-10px);}
+
+
+
+
+/* slider */
+.sliderWrap .bx-wrapper {
+    box-shadow: none;
+    border: 0 none;
+    margin-bottom: 0;
+}
+.slider li img {width: 100%;}
+.slider li.slider1st,
+.slider li.slider2st {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 1000px;
+}
+
+.slider li.slider1st{background-image: url(../images/mainimg01.jpg);}
+.slider li.slider2st{background-image: url(../images/mainimg02.jpg);}
+
+.sliderWrap .slider_txt {
+  position: absolute; left: 50%; top: 30%;
+  transform:translate(-50%, -50%); color: #fff; text-align: center;
+}
+
+
+/* content */
+
+.content .contList {
+  width: 1240px; margin: 0 auto; position: relative;
+  display:flex; flex-wrap:wrap;
+}
+.content .contList>li {width: 25%; height: 310px; font-size: 2rem;;}
+.content .contList>li:nth-child(2n) { background: pink;}
+.content .contList>li:nth-child(3n+1) { background: skyblue;}
+.content .contList>li:nth-child(1) { }
+.content .contList>li:nth-child(2) { }
+.content .contList>li:nth-child(3) { width: 50%;}
+.content .contList>li:nth-child(4) { }
+.content .contList>li:nth-child(5) { }
+.content .contList>li:nth-child(6) { width: 50%;}
+.content .contList>li:nth-child(7) { height:620px;}
+.content .contList>li:nth-child(8) { width: 50%;}
+.content .contList>li:nth-child(9) { }
+.content .contList>li:nth-child(10) { position: absolute; left:310px; bottom: 0;}
+.content .contList>li:nth-child(11) { width: 50%; position: absolute; right: 0; bottom: 0;}
