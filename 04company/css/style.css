@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; }
+body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height: 100%;}
 /* header */
 #headerTop {
    width: 100%; height: 82px; margin: 0 auto; z-index:9998; position: absolute;
@@ -88,10 +88,11 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; }
 
 /* content */
 
-.content { position: relative; top: -311px;}
+.content { position:relative; height: 1013px; }
 .content .contList {
-  width: 1244px; margin: 0 auto; position: relative;
+  width: 1244px; margin: 0 auto; position: absolute;
   display:flex; flex-wrap:wrap; margin-bottom: 80px;
+  left:50%; transform:translateX(-50%); top: -311px;
 }
 .content .contList>li {width: 25%; height: 311px;}
 .content .contList>li .overlay {
@@ -287,8 +288,48 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; }
 
 /* lContent */
 
-.lContWrap .lContent {width: 1244px; margin: 0 auto;}
-.lContWrap .lContent li {width: 50%;  height: 311px; padding-top: 41px;}
-.lContWrap .lContent>li:nth-child(1) {background: #83D0E7;}
-.lContWrap .lContent>li .lText{float: left; width: 300px; padding: 11px 38px;}
-.lContWrap .lContent>li img {display: block; float: right; }
+.lContWrap .lContent {width: 1244px; margin: 0 auto; margin-bottom: 80px;}
+.lContWrap .lContent li {
+  width: 50%;  height: 311px; padding-top: 41px; color: #fff;
+  position: relative;
+}
+.lContWrap .lContent>li:nth-child(1) {background: #83D0E7; float: left;}
+.lContWrap .lContent>li .lText{float: left; width: 65%; padding: 11px 38px;}
+.lContWrap .lContent>li img {display: block; float: right; padding-right: 40px;}
+.lContWrap .lContent>li h3 { font-size: 30px; }
+.lContWrap .lContent>li h3:after {
+  content:""; width: 50px; height: 2px; display: block; background: #fff;
+  margin: 10px 0 20px;
+}
+.lContWrap .lContent>li h4 {margin-bottom: 10px;}
+.lContWrap .lContent>li p {line-height: 24px; font-size: 15px; margin-bottom: 3px;}
+.lContWrap .lContent .detail {
+  display: block; border: 2px solid #fff; width: 200px; height: 40px;
+  position: absolute; bottom: 50px;
+}
+.lContWrap .lContent .detail a {
+  display: block; text-align: center; line-height: 40px; color: #fff;
+}
+.lContWrap .lContent>li:nth-child(2) {background: #525252; float: right;}
+.lContWrap .lContent>li:nth-child(2) img {padding-top: 54px;}
+
+/* footer */
+
+footer {background: #222222;}
+.footerWrap {width: 1244px; height: 198px; margin: 0 auto; position: relative;}
+.footerlogo {
+  width: 234px; height: 100%;float: left; margin-right: 20px;
+  display:flex; justify-content: center; align-items: center;
+}
+.footerlogo a{
+  display: block; background:url(../images/logo01.png) no-repeat 0 0;
+  height: 35px; width: 234px; text-indent:-9999px;
+}
+.footerWrap .copywrite {position: absolute; left: 274px;}
+.footerWrap .copywrite .ft_menu li {float: left; padding-top: 50px; margin-bottom: 12px;}
+.footerWrap .copywrite .ft_menu li a {color: #fff; position: relative;}
+.footerWrap .copywrite .ft_menu li a:after {content:""; width: 2px; height: 14px; background: #fff; position: absolute; right: -21px; top: 1px;}
+.footerWrap .copywrite .ft_menu li:last-child a:after {display: none;}
+.footerWrap .copywrite .ft_menu li:nth-child(2) a {font-size: 18px; font-weight: bold;}
+.footerWrap .copywrite .ft_menu li + li {margin-left: 40px;}
+.footerWrap .copywrite p {color: #A7ABA2; font-size: 14px; line-height: 20px; padding-bottom: 12px;}
