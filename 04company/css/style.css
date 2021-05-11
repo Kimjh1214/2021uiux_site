@@ -3,16 +3,16 @@
 body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height: 100%;}
 /* header */
 #headerTop {
-   width: 100%; height: 82px; margin: 0 auto; z-index:9998; position: absolute;
+   width: 100%; height: 82px; margin: 0 auto; z-index:1; position: absolute;
    transition:.3s;
  }
 #headerWrap {
-  width: 1244px; position: absolute; z-index:9999;
-  left: 50%; transform: translate(-50%); top: 20px;
+  width: 1244px; position: absolute; z-index:3;
+  left: 50%; transform: translate(-50%); padding-top: 20px;
 }
-#headerTop.fixed {position: fixed; background: #fff; z-index:9998}
+#headerTop.fixed {position: fixed; background: #fff; z-index:2;}
 #headerTop.fixed #headerWrap li a { color: #000; }
-#headerWrap h1.logo { float: left; width: 100px;}
+#headerWrap h1.logo { float: left; }
 #headerWrap h1.logo a{
   display: block; background:url(../images/logo01.png) no-repeat 0 0;
   height: 35px; width: 234px; text-indent:-9999px; transition:.3s
@@ -43,8 +43,9 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height
 #headerTop.fixed #headerWrap .lang a.active {color: #fff;}
 
 #headerWrap .toggleMenu {
-  width: 50px; height: 50px; background:gray; float: right;
+  width: 40px; height: 40px; background:#83D0E7; float: right;
   display:none; justify-content: center; align-items: center;
+  cursor:pointer;
 }
 #headerWrap .toggleMenu div {
   width: 30px; height: 2px; background: #fff; border-radius: 2px;

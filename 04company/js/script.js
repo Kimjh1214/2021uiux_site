@@ -6,13 +6,12 @@ $(document).ready(function(){
   $(window).scroll(function(){
     let scrollY = $(window).scrollTop();
 
-    console.log(headerT);
     if( headerT < scrollY){
       $("#headerTop").addClass("fixed");
 
     }else{
       $("#headerTop").removeClass("fixed");
-    
+
     }
   });
 
