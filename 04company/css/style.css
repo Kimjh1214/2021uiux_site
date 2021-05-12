@@ -18,7 +18,7 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height
   height: 35px; width: 234px; text-indent:-9999px; transition:.3s
 }
 #headerTop.fixed h1.logo a{  background:url(../images/logo01.png) no-repeat 0 -35px;}
-#headerWrap #main_menu {float: right;}
+#headerWrap #main_menu {float: right; }
 
 #main_menu li {float: left;}
 #main_menu li a {
@@ -43,17 +43,29 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height
 #headerTop.fixed #headerWrap .lang a.active {color: #fff;}
 
 #headerWrap .toggleMenu {
-  width: 40px; height: 40px; background:#83D0E7; float: right;
+  width: 40px; height: 40px; position: absolute;
+  right: 20px; top: 18px;
   display:none; justify-content: center; align-items: center;
-  cursor:pointer;
+  cursor:pointer; z-index:100; flex-flow:column
 }
+#headerTop.fixed .toggleMenu div {background: #0E4E95;}
 #headerWrap .toggleMenu div {
-  width: 30px; height: 2px; background: #fff; border-radius: 2px;
+  width: 30px; height: 3px; background: #fff; border-radius: 2px;
   position: absolute;
 }
 #headerWrap .toggleMenu .bar1 {transform:translateY(10px);}
 #headerWrap .toggleMenu .bar2 {}
 #headerWrap .toggleMenu .bar3 {transform:translateY(-10px);}
+
+.toggleMenu.change .bar1 {
+  left: 50%; top: 50%; transform:translate(-50%, -50%) rotate(-45deg) !important;
+}
+.toggleMenu.change .bar2 {
+  opacity:0
+}
+.toggleMenu.change .bar3 {
+  left: 50%; top: 50%; transform:translate(-50%, -50%) rotate(45deg) !important;
+}
 
 
 
@@ -85,6 +97,8 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height
   transform:translate(-50%, -50%); color: #fff; text-align: center;
 }
 .sliderWrap .slider_txt h3 { font-size:60px;}
+
+.bx-wrapper .bx-controls-direction a {z-index:1;}
 
 
 /* content */
