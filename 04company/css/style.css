@@ -189,7 +189,6 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height
   margin: 10px auto;
 }
 
-
 .content .contList>li:nth-child(8) {
   height: 622px; background:url(../images/content06.png) no-repeat center;
 }
@@ -261,15 +260,17 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height
   text-align: center; line-height: 311px; font-size: 20px; font-weight: bold;
 }
 .galContent .galList>li:nth-child(1) {
-  height: 622px; padding: 35px 20px; background: #0E4E95;
+  height: 622px; padding: 0 20px; background: #0E4E95;
+  display:flex; flex-flow:column; color: #fff;
+  justify-content:center; align-items:center;
 }
 .galContent .galList>li:nth-child(1) .cWrap {
-  height: 100%; display:flex; flex-flow:column;
-  justify-content:center; align-items:center; color: #fff;
+  height: 40%; display:flex; flex-flow:column;
+  justify-content:center; align-items:center;
 }
 .galContent .galList>li:nth-child(1) .cWrap img {margin-bottom: 20px;}
-.galContent .galList>li:nth-child(1) .cWrap h3 {margin-bottom: 40px; font-size: 32px;}
-.galContent .galList>li:nth-child(1) .cWrap p {padding: 0 40px; line-height: 24px;}
+.galContent .galList>li:nth-child(1) .cWrap h3 {font-size: 32px;}
+.galContent .galList>li:nth-child(1) p {padding: 0 40px; line-height: 24px;}
 .galContent .galList>li:nth-child(2) {
   background:url(../images/gallery01.png) no-repeat center;
 }
