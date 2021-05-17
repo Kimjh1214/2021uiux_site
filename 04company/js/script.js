@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $(".slider").bxSlider({
-    pager:false
+    pager:false,
+    controls:false
   });
   const headerT = $("#headerTop").offset().top;
   $(window).scroll(function(){
@@ -20,9 +21,16 @@ $(document).ready(function(){
     if(toggle == "toggleMenu"){
       $(".toggleMenu").addClass("change");
       $("#main_menu").stop().animate({top:0});
+      $("#headerTop").addClass("fixed");
+      $("#main_menu").on("scroll touchmove mousewheel", function(event){
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+      });
     }else{
       $(".toggleMenu").removeClass("change");
       $("#main_menu").stop().animate({top:"-100%"});
+      $("#headerTop").removeClass("fixed")
     }
   });
 
@@ -30,4 +38,5 @@ $(document).ready(function(){
     $("#main_menu").removeAttr("style");
     $(".toggleMenu").removeClass("change");
   });
+
 });

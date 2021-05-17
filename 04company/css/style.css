@@ -20,12 +20,14 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height
 #headerTop.fixed h1.logo a{  background:url(../images/logo01.png) no-repeat 0 -35px;}
 #headerWrap #main_menu {float: right; }
 
-#main_menu li {float: left;}
-#main_menu li a {
+#main_menu>ul>li {float: left;}
+#main_menu>ul>li>a {
   display: block; padding: 0 20px; line-height: 40px;
   color: #fff; font-weight: bold;
 }
-#headerTop #main_menu li:hover a{ color: #0e4e95;}
+#main_menu .sub_menu {display: none;}
+#main_menu>ul>li>a>span {}
+#headerTop #main_menu>li:hover a{ color: #0e4e95;}
 
 #headerWrap .lang { float: right; margin-left: 44px; }
 #headerWrap .lang a {
@@ -253,7 +255,12 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height
   display:flex; flex-wrap:wrap; margin-bottom: 80px;
   box-shadow:1px 1px 10px #777;
 }
-.galContent .galList>li { width: 25%; height: 311px; }
+.galContent .galList>li { width: 25%; height: 311px; position: relative;}
+.galContent .galList>li .overlay {
+  position: absolute; width: 100%; height: 60px; bottom: 0; left: 0;
+  background:rgba(0, 0, 0, .7); color: #fefefe; text-align: center; line-height: 60px;
+  font-size: 20px; display: none;
+}
 .galContent .galList>li:nth-child(3),
 .galContent .galList>li:nth-child(5),
 .galContent .galList>li:nth-child(7) {
@@ -344,7 +351,10 @@ footer {background: #222222;}
 .footerWrap .copywrite {position: absolute; left: 274px;}
 .footerWrap .copywrite .ft_menu li {float: left; padding-top: 50px; margin-bottom: 12px;}
 .footerWrap .copywrite .ft_menu li a {color: #fff; position: relative;}
-.footerWrap .copywrite .ft_menu li a:after {content:""; width: 2px; height: 14px; background: #fff; position: absolute; right: -21px; top: 1px;}
+.footerWrap .copywrite .ft_menu li a:after {
+  content:""; width: 2px; height: 14px; background: #fff;
+  position: absolute; right: -21px; top: 1px;
+}
 .footerWrap .copywrite .ft_menu li:last-child a:after {display: none;}
 .footerWrap .copywrite .ft_menu li:nth-child(2) a {font-size: 18px; font-weight: bold;}
 .footerWrap .copywrite .ft_menu li + li {margin-left: 40px;}
