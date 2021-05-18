@@ -17,8 +17,13 @@
     position:fixed; width: 100%; height: 80%; background:#fff; z-index:2;
     top: -100%; left: 0; padding-top: 80px;
   }
-  #headerTop #headerWrap #main_menu>ul>li {float:initial; border-top:1px solid #C4C4C4;}
+  #headerTop #headerWrap #main_menu>ul>li {
+    float:initial; width: 100%; border-top:1px solid #C4C4C4;
+  }
   #headerTop #headerWrap #main_menu>ul>li:last-child {border-bottom:1px solid #C4C4C4;}
+  #main_menu>ul>li .tgBtn {display:flex;}
+  #main_menu>ul>li .tgBtn.active {transform:rotate(180deg);}
+  #main_menu>ul>li .tgBtn.active .bar2 {opacity:0;}
   #headerTop #headerWrap .lang {display: none;}
 
   /* slider */

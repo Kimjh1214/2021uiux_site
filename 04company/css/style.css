@@ -20,14 +20,24 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height
 #headerTop.fixed h1.logo a{  background:url(../images/logo01.png) no-repeat 0 -35px;}
 #headerWrap #main_menu {float: right; }
 
-#main_menu>ul>li {float: left;}
+#main_menu>ul>li {float: left; width: 150px;}
 #main_menu>ul>li>a {
-  display: block; padding: 0 20px; line-height: 40px;
-  color: #fff; font-weight: bold;
+  display: block; text-align: center; line-height: 40px;
+  color: #fff; font-weight: bold; position: relative;
 }
 #main_menu .sub_menu {display: none;}
-#main_menu>ul>li>a>span {}
-#headerTop #main_menu>li:hover a{ color: #0e4e95;}
+#main_menu>ul>li .tgBtn {
+  display:none; width: 24px; height: 24px;
+  background: #0E4E95; border-radius:12px;
+  justify-content:center; align-items:center;
+  position:absolute; right: 20px; top: 8px;
+  transition:.5s;
+}
+#main_menu>ul>li .tgBtn div { width: 10px; height: 2px; background: #fff;}
+#main_menu>ul>li .tgBtn .bar2 {
+  position:absolute; transform:rotate(90deg); opacity:1;
+}
+#headerTop #main_menu>ul>li:hover>a{ color: #0e4e95;}
 
 #headerWrap .lang { float: right; margin-left: 44px; }
 #headerWrap .lang a {
