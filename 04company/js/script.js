@@ -4,17 +4,8 @@ $(document).ready(function(){
     controls:false
   });
   const headerT = $("#headerTop").offset().top;
-  $(window).scroll(function(){
-    let scrollY = $(window).scrollTop();
+  let winWidth = $(window).innerWidth();
 
-    if( headerT < scrollY){
-      $("#headerTop").addClass("fixed");
-
-    }else{
-      $("#headerTop").removeClass("fixed");
-
-    }
-  });
 
   $(".lang a").click(function(){
     $(this).addClass("active").siblings().removeClass("active");
@@ -27,23 +18,22 @@ $(document).ready(function(){
       $(".toggleMenu").addClass("change");
       $("#main_menu").stop().animate({top:0});
       $("#headerTop").addClass("fixed");
-      $("#headerTop").on("scroll touchmove mousewheel", function(event){
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-      });
+
     }else{
       $(".toggleMenu").removeClass("change");
       $("#main_menu").stop().animate({top:"-100%"});
-      $("#headerTop").removeClass("fixed")
+      // $("#headerTop").removeClass("fixed");
+      $("#headerTop").removeAttr("style");
     }
   });
 
-  let winWidth = $(window).innerWidth();
+
   allView();
 
   $(window).resize(function(){
     $("#main_menu").removeAttr("style");
+    $(".sub_menu").hide();
+    $("#headerTop").removeAttr("style");
     $(".toggleMenu").removeClass("change");
     winWidth = $(window).innerWidth();
     allView();
@@ -52,11 +42,11 @@ $(document).ready(function(){
 
   function allView(){
     if(winWidth <= 700){
-      mobileView("view");
       pcView("off");
+      mobileView("view");
     }else{
-      pcView("view");
       mobileView("off");
+      pcView("view");
     }
   }
 
@@ -76,16 +66,21 @@ $(document).ready(function(){
     }else{
       $("#main_menu>ul>li").off("click");
     }
+
+
+
+
   }
 
   function pcView(on){
     if(on == "view"){
-      $("#main_menu>ul>li").on("mouseenter",function(){
+      $("#main_menu>ul>li").on("mouseenter click",function(){
         $("#headerTop").stop().animate({height:300},200);
         $(".sub_menu").stop().slideDown(400);
         $("#headerTop").addClass("fixed");
       })
       $("#main_menu").on("mouseleave",function(){
+        if(winWidth <= 700){return false   }
         $("#headerTop").stop().animate({height:80},200);
         $(".sub_menu").stop().slideUp(400);
         if(0>scrollY|0==scrollY){
@@ -100,9 +95,21 @@ $(document).ready(function(){
     }
   }
 
+  start();
 
+  function start(){
+    $(window).scroll(function(){
+      let scrollY = $(window).scrollTop();
 
+      if( headerT < scrollY){
+        $("#headerTop").addClass("fixed");
 
+      }else{
+        $("#headerTop").removeClass("fixed");
+
+      }
+    });
+  }
 
 
 
