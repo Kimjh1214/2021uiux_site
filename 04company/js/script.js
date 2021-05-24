@@ -75,7 +75,7 @@ $(document).ready(function(){
   function pcView(on){
     if(on == "view"){
       $("#main_menu>ul>li").on("mouseenter click",function(){
-        $("#headerTop").stop().animate({height:300},200);
+        $("#headerTop").stop().animate({height:250},200);
         $(".sub_menu").stop().slideDown(400);
         $("#headerTop").addClass("fixed");
       })
@@ -108,6 +108,14 @@ $(document).ready(function(){
         $("#headerTop").removeClass("fixed");
 
       }
+    });
+  }
+
+  for(let i=0;i<$(".tab_menu>div").length;i++){
+    $(".tab_content>div").hide().eq(i).fadeIn();
+    $(".tab_menu>div").eq(i).click(function(){
+      $(".tab_menu>div").removeClass("active").eq(i).addClass("active");
+      $(".tab_content>div").hide().eq(i).fadeIn();
     });
   }
 

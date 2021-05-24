@@ -20,7 +20,7 @@ body { font-family: 'NanumSquare', sans-serif !important; font-size:17px; height
 #headerTop.fixed h1.logo a{  background:url(../images/logo01.png) no-repeat 0 -35px;}
 #headerWrap #main_menu {float: right; }
 
-#main_menu>ul>li {float: left; padding:0 50px}
+#main_menu>ul>li {float: left; padding:0 30px}
 #main_menu>ul>li>a {
   display: block; text-align: center; line-height: 40px;
   color: #fff; font-weight: bold; position: relative;
@@ -369,3 +369,38 @@ footer {background: #222222;}
 .footerWrap .copywrite .ft_menu li:nth-child(2) a {font-size: 18px; font-weight: bold;}
 .footerWrap .copywrite .ft_menu li + li {margin-left: 40px;}
 .footerWrap .copywrite p {color: #A7ABA2; font-size: 14px; line-height: 20px; padding-bottom: 12px;}
+
+/* banner */
+
+.bannerWrap {height: 700px;}
+
+/* company */
+
+.content.company {height: 100%;}
+.content.company .contentWrap {width: 1244px; margin: 0 auto;}
+.content.company .tab_menu {display:flex; flex-wrap:wrap; margin-bottom: 20px;}
+.content.company .tab_menu>div {
+  width: 311px; height: 100px;
+  display:flex; justify-content: center; align-items: center;
+  font-weight:bold; cursor:pointer;
+}
+
+.content.company .tab_menu>div.active {background: #0E4E95; color: #fff;}
+.content.company .root {margin-bottom: 40px;}
+.content.company .root>ul>li {
+  float: left; position: relative; padding-right: 30px; line-height: 24px;
+}
+.content.company .root>ul>li:after {
+  content:''; display: block; width: 24px; height: 24px;
+  background-image: url(../images/arrow.png);
+  position: absolute; right:0; top: 0;
+}
+.content.company .root>ul>li:last-child:after {display: none;}
+.content.company .tab_content {margin-bottom: 80px;}
+.content.company .tab_content h2 {
+  font-size: 40px; text-align: center; margin-bottom: 80px; color: #0E4E95;
+}
+
+/* project */
+
+.content.project

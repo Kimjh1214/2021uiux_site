@@ -20,8 +20,9 @@
   #headerTop #headerWrap #main_menu>ul>li {
     float:inherit; padding:0 30px; width: 100%; border-top:1px solid #C4C4C4;
   }
-  #headerTop #headerWrap #main_menu>ul>li a {text-align:left;}
+  #headerTop #headerWrap #main_menu>ul>li a {text-align:left; }
   #headerTop #headerWrap #main_menu>ul>li:last-child {border-bottom:1px solid #C4C4C4;}
+  #headerTop #headerWrap #main_menu .sub_menu li {border-top:1px solid #c4c4c4; padding: 4px 0;}
   #main_menu>ul>li .tgBtn {display:flex;}
   #main_menu>ul>li .tgBtn.active {transform:rotate(180deg);}
   #main_menu>ul>li .tgBtn.active .bar2 {opacity:0;}
