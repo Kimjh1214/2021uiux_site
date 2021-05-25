@@ -176,6 +176,10 @@
   }
   .footerWrap .copywrite .ft_menu li:nth-child(2) a {font-size: 16px;}
 
+  /* sub-common */
+
+  .bannerWrap {height: 400px;}
+  .bannerWrap img {height:400px;}
 
 
 
