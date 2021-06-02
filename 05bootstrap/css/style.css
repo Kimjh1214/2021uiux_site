@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.headerTop {background:rgba(255, 255, 255, 0.5);}
+
+.visualWrap {
+  height: 500px;
+  background:url(../images/visual_main.png) no-repeat center;
+  background-size:cover;
+}
+.gray {background: #f0f1f4;}
