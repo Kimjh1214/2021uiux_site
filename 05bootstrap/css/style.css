@@ -1,10 +1,29 @@
 @charset "UTF-8";
 
+li {list-style:none;}
+:root {
+  --bg-color-1:#f6f6f6;
+  --bg-color-2:#C2C2C2;
+}
 .headerTop {background:rgba(255, 255, 255, 0.5);}
+.navbar-nav li + li {margin-left: 35px;}
+.nav-item a {padding: 10px; font-size:18px;}
 
 .visualWrap {
-  height: 500px;
+  height: 700px;
   background:url(../images/visual_main.png) no-repeat center;
   background-size:cover;
 }
 .gray {background: #f0f1f4;}
+
+.adver {background:var(--bg-color-1);}
+
+.adver .video video{
+  object-fit:fill;width: 730px ;border-radius:5px;
+  box-shadow:10px 10px 25px rgb(46,61,73)
+}
+
+.card-view li {height:calc((411px - 32px)/3); background:var(--bg-color-2);}
+.card-view li a {color: #171717;}
+.card-view li a div h4 {font-size: 1.125rem; font-weight:bold;}
+.card-view li a div p {font-size: 14px; word-break:keep-all;}
