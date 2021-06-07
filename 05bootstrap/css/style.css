@@ -4,7 +4,9 @@ li {list-style:none;}
 :root {
   --bg-color-1:#f6f6f6;
   --bg-color-2:#C2C2C2;
+  --btn-color:#50BEC0;
 }
+.btn {background:var(--btn-color); color:var(--bg-color-1);}
 .headerTop {background:rgba(255, 255, 255, 0.5);}
 .navbar-nav li + li {margin-left: 20px;}
 .nav-item a {padding: 10px; font-size:16px;}
@@ -28,6 +30,13 @@ li {list-style:none;}
 .card-view >div a div h4 {font-size: 1.125rem; font-weight:bold;}
 .card-view >div a div p {font-size: 14px; word-break:keep-all;}
 .container .row div p span {color:#50BEC0}
+
+.point {background:var(--bg-color-1);}
+
+.img-view {height: 400px;}
+.img-view img {position: absolute;}
+.img-view .img-1st{right:1.25rem; top:0; max-width:400px;}
+.img-view .img-2nd{left:1.25rem; bottom:2.25rem; max-width:166px;}
 
 @media screen and (max-width:768px) {
   .navbar-nav li {margin-left: 20px !important;}
