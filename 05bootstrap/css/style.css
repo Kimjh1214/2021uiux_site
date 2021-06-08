@@ -38,6 +38,26 @@ li {list-style:none;}
 .img-view .img-1st{right:1.25rem; top:0; max-width:400px;}
 .img-view .img-2nd{left:1.25rem; bottom:2.25rem; max-width:166px;}
 
+.container h2 {font-weight:bold;}
+.event {background:var(--bg-color-1);}
+h3.title {text-align: center; font-weight: bold; font-size: 32px;}
+.title-txt {text-align: center; font-size: 16px;}
+
+.card-title {text-align: center; font-weight: bold; font-size: 17px;}
+.card-body p {font-size: 14px; text-align: center;}
+.card-body .date {font-size: 12px; padding-top: 20px;}
+
+.down-box {
+  width: 80%; height: 50px; border: 1px solid #000;
+  text-align: center;
+}
+.down-box a {font-size: 20px;}
+
+.mob-down {
+  height: 50px; border: 1px solid #000; text-align: center;
+}
+
+
 @media screen and (max-width:768px) {
   .navbar-nav li {margin-left: 20px !important;}
   .visualWrap {height: 400px;}
