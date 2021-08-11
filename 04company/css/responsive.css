@@ -166,7 +166,7 @@
   .footerWrap .copywrite {position:initial; left: 0;}
   .footerWrap .copywrite .ft_menu {padding-right: 50px; margin-bottom: 20px;}
   .footerWrap .copywrite .ft_menu li {
-    padding-top:0; float:initial; display:inline-block;
+    padding-top:0; float:none; display:inline-block;
   }
   .footerWrap .copywrite .ft_menu li + li {margin-left: 20px;}
   .footerWrap .copywrite .ft_menu li:nth-child(5) {margin-left: 0;}
